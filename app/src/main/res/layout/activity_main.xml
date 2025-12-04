@@ -1,19 +1,364 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5576C"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/control_panel_title"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/control_panel_subtitle"
+                android:textAlignment="center"
+                android:textColor="#636E72"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_disconnected"
+                android:textAlignment="center"
+                android:padding="12dp"
+                android:background="#FFD1D1"
+                android:textColor="#D63031"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="24dp"/>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                app:columnCount="2"
+                app:rowOrderPreserved="false"
+                app:useDefaultMargins="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="2"
+                    app:layout_columnSpan="2"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="8dp"
+                    android:backgroundTint="#FF6B6B"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food_dispenser_title"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="16dp"/>
+
+                        <EditText
+                            android:id="@+id/editTextFoodAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/food_amount_hint"
+                            android:inputType="number"
+                            android:text="@string/default_food_amount"
+                            android:padding="14dp"
+                            android:background="@drawable/edittext_rounded"
+                            android:layout_marginBottom="10dp"
+                            android:autofillHints="" />
+
+                        <Button
+                            android:id="@+id/buttonDispense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dispense_food_now"
+                            android:backgroundTint="#FF5252"
+                            android:textColor="@color/white"
+                            android:paddingVertical="16dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dispense_food_description"
+                            android:textColor="@color/white"
+                            android:padding="10dp"
+                            android:background="#55FFFFFF"
+                            android:textSize="12sp"
+                            android:layout_marginTop="10dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginEnd="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food_level_title"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="10dp"/>
+                        <EditText
+                            android:id="@+id/editTextFoodLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/food_level_hint"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:background="@drawable/edittext_rounded"
+                            android:layout_marginBottom="10dp"
+                            android:autofillHints="" />
+                        <Button
+                            android:id="@+id/buttonUpdateFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/update"
+                            android:backgroundTint="#00B894"/>
+                        <Button
+                            android:id="@+id/buttonResetFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reset_food"
+                            android:backgroundTint="#FDCB6E"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/water_level_title"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="10dp"/>
+                        <EditText
+                            android:id="@+id/editTextWaterLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/water_level_hint"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:background="@drawable/edittext_rounded"
+                            android:layout_marginBottom="10dp"
+                            android:autofillHints="" />
+                        <Button
+                            android:id="@+id/buttonUpdateWater"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/update"
+                            android:backgroundTint="#4ECDC4"/>
+                        <Button
+                            android:id="@+id/buttonResetWater"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reset_water"
+                            android:backgroundTint="#FDCB6E"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="2"
+                    app:layout_columnSpan="2"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/feeding_schedule_title"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginBottom="10dp">
+                            <EditText
+                                android:id="@+id/editTextFeedingTime1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/default_feeding_time_1"
+                                android:inputType="time"
+                                android:padding="14dp"
+                                android:background="@drawable/edittext_rounded"
+                                android:layout_marginEnd="5dp"
+                                android:autofillHints="" />
+                            <EditText
+                                android:id="@+id/editTextFeedingTime2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/default_feeding_time_2"
+                                android:inputType="time"
+                                android:padding="14dp"
+                                android:background="@drawable/edittext_rounded"
+                                android:layout_marginStart="5dp"
+                                android:autofillHints="" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonSaveSchedule"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/save_schedule"
+                            android:backgroundTint="#00B894"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="2"
+                    app:layout_columnSpan="2"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/animal_activity_title"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="10dp"/>
+
+                        <Spinner
+                            android:id="@+id/spinnerActivityLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/activity_levels"
+                            android:padding="14dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_rounded"/>
+
+                        <Button
+                            android:id="@+id/buttonUpdateActivity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/update_activity"
+                            android:backgroundTint="#00B894"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="2"
+                    app:layout_columnSpan="2"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quick_actions_title"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="10dp"/>
+
+                        <Button
+                            android:id="@+id/buttonRefillAll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/refill_all"
+                            android:backgroundTint="#00B894"
+                            android:layout_marginBottom="10dp"/>
+
+                        <Button
+                            android:id="@+id/buttonResetSystem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reset_system"
+                            android:backgroundTint="#FDCB6E"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

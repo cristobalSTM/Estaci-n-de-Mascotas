@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Estación de Mascotas</string>
+    <string name="control_panel_title">🐾 Panel de Control - Estación de Mascotas</string>
+    <string name="control_panel_subtitle">Gestiona la alimentación y cuidado de tu mascota</string>
+    <string name="status_disconnected">🟡 Desconectado</string>
+    <string name="status_connected">🟢 Conectado</string>
+    <string name="food_dispenser_title">🍽️ Dispensador de Comida</string>
+    <string name="food_amount_hint">Cantidad (gramos)</string>
+    <string name="dispense_food_now">🍴 Dispensar Comida Ahora</string>
+    <string name="dispense_food_description">Dispensa la cantidad seleccionada de comida en el tazón</string>
+    <string name="food_level_title">⚖️ Nivel de Comida</string>
+    <string name="food_level_hint">Comida restante (gramos)</string>
+    <string name="update">🔄 Actualizar</string>
+    <string name="reset_food">↩️ Resetear (500g)</string>
+    <string name="water_level_title">💧 Nivel de Agua</string>
+    <string name="water_level_hint">Agua restante (ml)</string>
+    <string name="reset_water">↩️ Resetear (1000ml)</string>
+    <string name="feeding_schedule_title">⏰ Horario de Alimentación</string>
+    <string name="save_schedule">📅 Guardar Horario</string>
+    <string name="animal_activity_title">❤️ Actividad del Animal</string>
+    <string name="update_activity">🏃 Actualizar Actividad</string>
+    <string name="quick_actions_title">⚡ Acciones Rápidas</string>
+    <string name="refill_all">💧 Rellenar Todo</string>
+    <string name="reset_system">⚠️ Resetear Sistema</string>
+    <string name="default_food_amount">50</string>
+    <string name="default_feeding_time_1">08:00</string>
+    <string name="default_feeding_time_2">18:00</string>
 </resources>

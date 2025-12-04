@@ -1,0 +1,21 @@
+{
+  "pet_station": {
+    "status": "disconnected",
+    "food": {
+      "level": 80,
+      "last_dispensed_amount": 20
+    },
+    "water": {
+      "level": 60
+    },
+    "schedule": {
+      "times": [
+        "08:00",
+        "20:00"
+      ]
+    },
+    "activity": {
+      "level": "normal"
+    }
+  }
+}

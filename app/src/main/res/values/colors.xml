@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#ff6b6b</color>
+    <color name="secondary">#4ecdc4</color>
+    <color name="success">#00b894</color>
+    <color name="warning">#fdcb6e</color>
+    <color name="danger">#d63031</color>
+    <color name="dark">#2d3436</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="light_green">#D4EDDA</color>
+    <color name="dark_green">#155724</color>
+    <color name="light_red">#F8D7DA</color>
+    <color name="dark_red">#721C24</color>
 </resources>
