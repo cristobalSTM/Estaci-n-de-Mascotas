@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "261714012074",
+    "firebase_url": "https://estacionmascotas-7c70d-default-rtdb.firebaseio.com",
+    "project_id": "estacionmascotas-7c70d",
+    "storage_bucket": "estacionmascotas-7c70d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261714012074:android:bdee00a07d74a56dddadd3",
+        "android_client_info": {
+          "package_name": "com.example.estacindemascotas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFWb8vcQktCzuCe-R0Lf62P5deKW7v5LE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
